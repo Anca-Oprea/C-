@@ -205,12 +205,51 @@ internal static class Program{
     //    Song s1 = new Song("Boniem", "Karl",60);
     //    s1.Play();
 
-    Artikel a1= new Artikel(1,"Adidas",10,20);
+    // Artikel a1= new Artikel(1,"Adidas",10,20);
     
-    Artikel a2= new Artikel(2,"Pantofol",10,20);
-    Warenkorb warenkorb = new Warenkorb();
-    warenkorb.ArtikelInWarenkorbAnlegen(a1,2);
-    warenkorb.ArtikelInWarenkorbAnlegen(a2,1);
-    Console.WriteLine($"Gesamtpreis:{warenkorb.GesamtePreisErmitteln()}");
+    // Artikel a2= new Artikel(2,"Pantofol",10,20);
+    // Warenkorb warenkorb = new Warenkorb();
+    // warenkorb.ArtikelInWarenkorbAnlegen(a1,2);
+    // warenkorb.ArtikelInWarenkorbAnlegen(a2,1);
+    // Console.WriteLine($"Gesamtpreis:{warenkorb.GesamtePreisErmitteln()}");
+
+    Spellcaster spellcaster = new Spellcaster();
+    spellcaster.CastSpell();
+    Wizard wizard = new Wizard();
+    wizard.CastSpell();
+    }
+
+     
+  public class Spellcaster{
+
+    public  virtual void CastSpell(){
+        Console.WriteLine("Ich kann Zaubern");
+    }
+  } 
+public class Sorcerer: Spellcaster{
+    public override void CastSpell(){
+            base.CastSpell();
+        Console.WriteLine("Meine Zauberkraft ist mir angeboren");
     }
 }
+
+public class Wizard: Spellcaster{
+    public override void CastSpell(){
+        base.CastSpell();
+        Console.WriteLine("Für meine Zauberkraft musste ich hart arbeiten");
+    }
+}
+public class WildMagicSorcere:Sorcerer{
+    public override  sealed void CastSpell(){
+        base.CastSpell();
+        Console.WriteLine("Meine Zauber sind unberechenbar");
+    }
+}
+public class IlluusionWizard:Wizard{
+    public override  sealed void CastSpell(){
+        base.CastSpell();
+        Console.WriteLine("Ich habe mich auf Illusionszauber spezialisiert.");
+    }
+}
+}
+
