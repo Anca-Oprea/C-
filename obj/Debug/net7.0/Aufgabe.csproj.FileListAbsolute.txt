@@ -1,0 +1,15 @@
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\bin\Debug\net7.0\Aufgabe.exe
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\bin\Debug\net7.0\Aufgabe.deps.json
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\bin\Debug\net7.0\Aufgabe.runtimeconfig.json
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\bin\Debug\net7.0\Aufgabe.dll
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\bin\Debug\net7.0\Aufgabe.pdb
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.csproj.AssemblyReference.cache
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.AssemblyInfoInputs.cache
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.AssemblyInfo.cs
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.csproj.CoreCompileInputs.cache
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.dll
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\refint\Aufgabe.dll
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.pdb
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\Aufgabe.genruntimeconfig.cache
+C:\Users\oprea\Desktop\HTML\NewProjekt\Aufgabe\obj\Debug\net7.0\ref\Aufgabe.dll
