@@ -2,6 +2,72 @@
 using System.Diagnostics.Contracts;
 
 internal static class Program{
+
+    public enum TankFüllstandLeuchte
+    {
+        GRUN,
+        GELB,
+        ROT    
+    };
+    public class PKW{
+        public TankFüllstandLeuchte TankFüllstandLeuchte_leuchte= TankFüllstandLeuchte.GRUN;
+        public event TankFüllstandBeobachter TankFüllstandBeobachter;
+        public PKW(){
+
+        }
+        private  int tankfullstand = 15;
+        internal object _fahrer;
+
+        public void addTankfullstand(int fullstand){
+            tankfullstand += fullstand;
+            if(tankfullstand >= 15){
+                TankFüllstandLeuchte_leuchte = TankFüllstandLeuchte.GRUN;
+            }
+        }
+
+        public void Fahren(){
+           
+
+            while(tankfullstand > 0){
+                Console.WriteLine("Brumm....");
+                tankfullstand--;
+                if(tankfullstand < 15){
+                    TankFüllstandLeuchte_leuchte = TankFüllstandLeuchte.GELB;
+                    TankFüllstandBeobachter?.Invoke(this);
+
+                }else if(tankfullstand < 10){
+                    TankFüllstandLeuchte_leuchte = TankFüllstandLeuchte.ROT;
+                     TankFüllstandBeobachter?.Invoke(this);
+
+
+
+                }
+            }
+        }    
+
+    }
+    public class Fahrer{
+        public void Tanken(PKW pKW){
+            pKW.addTankfullstand(15) ;
+        }
+        public void OnTankFüllstandNiedrig(PKW pkw){
+        switch(pkw.TankFüllstandLeuchte_leuchte){
+            case TankFüllstandLeuchte.GELB:
+            Console.WriteLine("Ach noch Zeit");
+            break;
+            case TankFüllstandLeuchte.ROT:
+            Console.WriteLine("Jetz aber dringend tanken...");
+            Tanken(pkw);
+            break;
+
+
+        }
+
+        }
+
+    }
+    public delegate void TankFüllstandBeobachter(PKW pkw);
+
      public static int quersumme(int zahl){
             int summe =0;
             while(zahl>0){
@@ -138,7 +204,11 @@ internal static class Program{
             
          }
     private static void Main(string[]args){
-        // Console.Write("Number insert:");
+        PKW pkw = new PKW();
+      Fahrer _fahrer = new Fahrer();
+        pkw.TankFüllstandBeobachter += pkw._fahrer.OnTankFüllstandNiedrig(pkw);
+    
+        pkw.Fahren();        // Console.Write("Number insert:");
         // ConsoleKeyInfo consoleKeyInfo = Console.ReadKey(true);
         // int i= 4;
         // if(i%2==0){
@@ -251,5 +321,6 @@ public class IlluusionWizard:Wizard{
         Console.WriteLine("Ich habe mich auf Illusionszauber spezialisiert.");
     }
 }
+
 }
 
